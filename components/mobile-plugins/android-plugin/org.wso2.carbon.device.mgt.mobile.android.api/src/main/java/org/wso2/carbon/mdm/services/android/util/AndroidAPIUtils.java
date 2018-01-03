@@ -112,6 +112,10 @@ public class AndroidAPIUtils {
     }
 
     public static EventsPublisherService getEventPublisherService() {
+        PrivilegedCarbonContext _ctx = PrivilegedCarbonContext.getThreadLocalCarbonContext();
+        _ctx.setTenantId(-1234,true);
+        _ctx.setUsername("admin");
+
         PrivilegedCarbonContext ctx = PrivilegedCarbonContext.getThreadLocalCarbonContext();
         EventsPublisherService eventsPublisherService =
                 (EventsPublisherService) ctx.getOSGiService(EventsPublisherService.class, null);

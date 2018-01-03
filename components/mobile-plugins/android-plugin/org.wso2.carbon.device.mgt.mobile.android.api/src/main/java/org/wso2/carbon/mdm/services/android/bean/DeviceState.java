@@ -20,7 +20,7 @@ package org.wso2.carbon.mdm.services.android.bean;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+//import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -35,7 +35,7 @@ import java.util.Map;
  */
 @ApiModel(value = "DeviceState",
         description = "This class carries all information related to device state.")
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class DeviceState {
 
     @XmlElementWrapper(required = true, name = "values")
